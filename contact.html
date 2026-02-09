@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="description" content="Builtline is a trusted construction company in Bangalore offering quality residential and commercial projects.">
+    <link rel="icon" type="image/png" href="static/image/Logo1.jpg">
+    <title>builtline</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="static/css/style.css?v=20260101">
+    <link rel="stylesheet" href="static/css/media.css?v=20260101">
+    <!-- likes for font-awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+        <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.min.css" rel="stylesheet">
+        <!-- emailjs link -->
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+        <!-- Google fonts -->
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=dropper_eye" />
+</head>
+<body>
+    <section class="section-container">
+     
+    <header class="container">
+      <img src="static/image/Logo1.jpg" alt="" class="Image">
+        <nav>
+            <a href="index.html"><span>HOME</span></a>
+            <a href="about.html">ABOUT</a>
+            <a href="services.html">SERVICE</a>
+            <a href="project.html">PROJECTS</a>
+             <a href="blog.html">BLOGS</a>
+           <div class="nav-dropdown">
+                <a href="contact.html">CONTACT</a>
+                <div class="dropdown-menu" style="width: 150px; padding: 10px;">
+                     <a href="https://builtlineconstruction.com/login.php">Login</a> 
+                </div>
+            </div>
+            <button><a href="getaquote.html">GET A QUOTE</a></button>
+        </nav>
+    </header>
+
+     <header class="scroll-header">
+        <div class="scroll-container container">
+            <img src="static/image/Logo1.jpg" alt="">
+            <navbar>
+                <a href="index.html"><span>HOME</span></a>
+                <a href="about.html">ABOUT</a>
+                <a href="services.html">SERVICE</a>
+                <a href="project.html">PROJECTS</a>
+                <a href="blog.html">BLOGS</a>
+                <div class="nav-dropdown">
+                    <a href="contact.html">CONTACT</a>
+                    <div class="dropdown-menu" style="width: 150px; padding: 10px;">
+                        <a href="https://builtlineconstruction.com/login.php">Login</a> 
+                    </div>
+                </div>
+                <button><a href="getaquote.html">GET A QUOTE</a></button>
+            </navbar>
+        </div>
+    </header>
+
+    <section class="contact-section">
+    <div class="contact-conten container">
+
+        <div class="contact-text">
+            <h1>Let's create something <br> great <span>- GET IN TOUCH </span> <br> & book your free <br> walkthrough.</h1>
+        </div>
+
+        <div class="contact-box">
+            <div class="text-box">
+                <h5>CONTACT</h5>
+                <p>9945599401</p>
+                <p>9606425860</p>
+            </div>
+
+             <div class="text-box">
+                <h5>Address</h5>
+                <p>#4th Main Road CA's, near Lingaraj Pujari & Co.<br>Malleshwaram, Bengaluru, Karnataka -560003</p>
+            </div>
+        </div>
+
+        <div class="contact-box">
+            <div class="text-box">
+                <h5>Email</h5>
+                <p>builtlineconstruction@gmail.com</p>
+            </div>
+
+             <div class="text-icons">
+                <h5>Socials</h5>
+
+                <a href="https://www.facebook.com/builtlineconstruction/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-facebook-f"></i></a>
+
+                <a href="https://www.instagram.com/builtline_construction/?hl=en" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i></a>
+
+                <a href="https://x.com/Builtline_" target="_blank"
+                    rel="noopener noreferrer"><i class="fa-brands fa-twitter"></i></a>
+
+                <a href="https://www.youtube.com/@BuiltlineConstruction"     target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-youtube"></i></a>
+
+                <a href="https://www.linkedin.com/company/builtline-construction/posts/?feedView=all" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin-in"></i></a>
+            </div>
+        </div>
+
+    </div>
+
+
+    <div class="contact-container">
+        <h1>Contact Form</h1>
+        <p class="subtitle">
+            Reach out with any queries or project details
+        </p>
+
+        <form class="contact-form" id="form">
+            <div class="form-box two-cols">
+                <input type="text" placeholder="First Name" id="firstname">
+                <input type="text" placeholder="Last Name" id="lastname">
+            </div>
+            <div class="error-box">
+                 <small class="error" id="fnameError"></small>
+                 <small class="error" id="lnameError"></small>
+            </div>
+           
+
+            <div class="form-box" >
+                <input type="email" placeholder="yourname@gmail.com" id="email">
+            </div>
+            <small class="error" id="emailError"></small>
+
+            <div class="form-box">
+                <input type="tel" placeholder="+91 1234567890" id="number">
+            </div>
+             <small class="error" id="numberError"></small>
+
+            <div class="form-box radio-row" id="bhkgroup">
+                <label><input type="radio" name="bhk" value="4 BHK">4 BHK</label>
+                <label><input type="radio" name="bhk" value="3 BHK">3 BHK</label>
+                <label><input type="radio" name="bhk" value="2 BHK">2 BHK</label>
+                <label><input type="radio" name="bhk" value="1 BHK">1 BHK</label>
+            </div>
+            <small class="error" id="bhkError"></small>
+
+            <div class="form-box">
+                <select id="project">
+                    <option value='' selected disabled>Select Project</option>
+                    <option value='interiorDesign'>Interior Design</option>
+                    <option value="architecture">Architecture</option>
+                    <option value="construction">Construction</option>
+                    <option value="renovation">Renovation</option>
+                </select>
+            </div>
+             <small class="error" id="projectError"></small>
+
+            <div class="form-box">
+                <textarea placeholder="Please share your project goals, requirements, or any question you have. We will get back to you as soon as possible"  id="message" ></textarea>
+            </div>
+            <small class="error" id="messageError"></small>
+
+            <button type="submit" class="contact-btn">SEND MESSAGE</button>
+        </form>
+    </div>
+ </section>
+
+
+    <div class="project-iframe">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d996018.213293143!2d76.56161271249998!3d12.798224700770437!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae17f883f972d7%3A0xa25b304370bcc9e!2sBuiltline%20Construction!5e0!3m2!1sen!2sin!4v1770632614422!5m2!1sen!2sin" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+    </div>
+
+    </section>
+     
+     <!-- script links -->
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+   <script src="static/script.js"></script>
+   
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.min.js"></script>
+    <script>
+        AOS.init();
+     </script>
+    <script>
+    window.addEventListener("scroll", () => {
+        if (window.scrollY > 120) {
+        document.body.classList.add("scrolled");
+        } else {
+        document.body.classList.remove("scrolled");
+        }
+    });
+    </script>
+
+     <script>
+         emailjs.init({
+            publicKey: '6upSXP_XXdZIVKN27',
+        });
+
+        const form = document.getElementById("form");
+        let firstname = document.getElementById("firstname")
+        let lastname = document.getElementById("lastname")
+
+        form.addEventListener("submit", handleSubmit);
+
+        function handleSubmit(e) {
+        e.preventDefault();
+
+        const valid =
+            validateFnameLive() &
+            validateLnameLive() &
+            validateEmailLive() &
+            validatePhoneLive() &
+            validateProjectLive() &
+            validateMessageLive() &
+            validateBHKLive();
+
+            if (valid) {
+                sendEmail()
+            }
+         }
+
+        firstname.addEventListener("input", validateFnameLive);
+        lastname.addEventListener("input", validateLnameLive);
+        email.addEventListener("input", validateEmailLive);
+        number.addEventListener("input", validatePhoneLive);
+        project.addEventListener("change", validateProjectLive);
+        message.addEventListener("input", validateMessageLive);
+
+        document.querySelectorAll('input[name="bhk"]').forEach(radio => {
+        radio.addEventListener("change", validateBHKLive);
+        });
+
+
+    function showError(input, msg, id) {
+    input.classList.add("input-error");
+    input.classList.remove("input-success");
+    document.getElementById(id).textContent = msg;
+    document.getElementById(id).className = "error";
+    }
+
+    function showSuccess(input, msg, id) {
+    input.classList.remove("input-error");
+    input.classList.add("input-success");
+    document.getElementById(id).textContent = msg;
+    document.getElementById(id).className = "success";
+    }
+
+   
+
+    function validateFnameLive() {
+    if (firstname.value.trim() === "" ) {
+        showError(firstname, "First name cannot be empty", "fnameError");
+        return false;
+    }
+    if (firstname.value.trim().length < 3) {
+        showError(firstname, "First name must be more than 2 characters", "fnameError");
+        return false;
+    }
+        showSuccess(firstname, "Looks good ✅", "fnameError");
+        return true;
+    }
+
+   function validateLnameLive() {
+    if (lastname.value.trim() === "" ) {
+        showError(lastname, "Last name cannot be empty", "lnameError");
+        return false;
+    }
+    if (lastname.value.trim().length < 1) {
+        showError(lastname, "Last name must be more than 1 characters", "lnameError");
+        return false;
+    }
+        showSuccess(lastname, "Looks good ✅", "lnameError");
+        return true;
+    }
+
+    function validateEmailLive() {
+    if (email.value.trim() === "") {
+        showError(email, "Email cannot be empty", "emailError");
+        return false;
+    }
+    const pattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!pattern.test(email.value.trim())) {
+        showError(email, "Enter valid email format", "emailError");
+        return false;
+    }
+        showSuccess(email, "Valid email ✅", "emailError");
+        return true;
+    }
+
+    function validatePhoneLive() {
+    if (number.value.trim() === "") {
+        showError(number, "Phone number cannot be empty", "numberError");
+        return false;
+    }
+    if (!/^[6-9]\d{9}$/.test(number.value.trim())) {
+        showError(number, "Enter 10 digit valid number", "numberError");
+        return false;
+    }
+    showSuccess(number, "Valid phone number ✅", "numberError");
+    return true;
+    }
+
+    function validateProjectLive() {
+    if (!project.value) {
+        showError(project, "Please select a project", "projectError");
+        return false;
+    }
+    showSuccess(project, "Project selected ✅", "projectError");
+    return true;
+    }
+
+    function validateMessageLive() {
+    if (message.value.trim() === "") {
+        showError(message, "Message cannot be empty", "messageError");
+        return false;
+    }
+    if (message.value.trim().length < 10) {
+        showError(message, "Message must be at least 10 characters", "messageError");
+        return false;
+    }
+    showSuccess(message, "Message looks good ✅", "messageError");
+    return true;
+    }
+
+    function validateBHKLive() {
+    const bhk = document.querySelector('input[name="bhk"]:checked');
+    if (!bhk) {
+        document.getElementById("bhkError").textContent = "Please select BHK";
+        document.getElementById("bhkError").className = "error";
+        return false;
+    }
+        document.getElementById("bhkError").textContent = "BHK selected ✅";
+        document.getElementById("bhkError").className = "success";
+        return true;
+    }
+
+// ---------- LIVE EVENTS ----------
+     
+    
+        function sendEmail(){ 
+            
+        let fname = document.getElementById("firstname").value.trim();
+        let lname = document.getElementById("lastname").value.trim();
+        let email = document.getElementById("email").value.trim();
+        let number = document.getElementById("number").value.trim();
+        let bhk_group = document.querySelector('input[name="bhk"]:checked')?.value || " ";
+        let project = document.getElementById("project").value;
+        let message = document.getElementById("message").value.trim();
+
+        let params = {
+            first_name: fname,
+            last_name: lname,
+            from_email: email,
+            from_number: number,
+            from_bhk:bhk_group,
+            from_project:project,
+            message: message
+        }
+
+        emailjs
+        .send('service_f234mci', 'template_43z54fb', params)
+        .then(()=>{
+            alert('Email Successfully Submitted ✅')
+            document.getElementById("form").reset();    
+        })
+        .catch(()=>{
+            alert("Email can not send!")
+        })
+        
+    }
+
+        
+    </script>
+
+    
+</body>
+</html>
