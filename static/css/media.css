@@ -167,11 +167,13 @@
 
     /* counter */
     .counter-container{
-        height: fit-content;
+        min-height: 100% !important;
         display: flex;
         padding: 0px 10px;
         flex-direction: column !important;
          width: 100%;
+         flex-wrap: wrap;
+         margin-top: -30px !important;
 
     }
     .content-box{
@@ -181,7 +183,7 @@
     }
     .counter-box::before{
         height: 210px;
-        top: 60px;
+        top: 0px;
     }
     .counter-box h2{
         font-size: 70px;
