@@ -842,8 +842,14 @@ line-height: 1.6;
     
 }
 .timeline-heading{
-    font-weight: 600;
-    color: darkgoldenrod;
+    font-weight: 700;
+    color: #ffffff;
+    background-color: #000;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
 }
 
 .timeline {
