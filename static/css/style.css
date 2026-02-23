@@ -3006,6 +3006,50 @@ html, body {
 .blog-btn:hover i{
     transform: scaleX(1.1);
 }
+
+/* location based in link */
+.blog-locations {
+    margin-top: 20px;
+    padding: 60px 10px;
+    background-color: #f9f9f9;
+}
+
+.location-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.location-card {
+    display: flex;
+    align-items: center;
+    background: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    border: 1px solid #eee;
+}
+
+.location-card i {
+    color: orange; /* Match your brand color */
+    margin-right: 10px;
+    font-size: 1.2rem;
+}
+
+.location-card:hover {
+    background: orange;
+    color: #fff;
+    transform: translateY(-3px);
+}
+
+.location-card:hover i {
+    color: #fff;
+}
  
 /* individual blogs */
 
@@ -3241,13 +3285,30 @@ html, body {
 
 /* Main Wrapper */
 .area-wrapper {
-    width: 85%;
-    max-width: 1200px;
+    width: 100%;
     margin: 170px 0px  auto;
-    padding: 20px 5%;
+    padding: 20px 7%;
 }
 
-/* Page Main Title */
+.area-section{
+    margin-top: 30px
+}
+.area-section h2{
+    color: darkgoldenrod;
+}
+
+
+.area-section p{
+    font-size: 20px;
+    line-height: 35px;
+}
+
+.area-section ul li{
+    font-size: 19px;
+}
+.area-maplinks{
+    margin-top: 20px;
+}
 .area-title {
     font-size: 36px;
     font-weight: 700;
@@ -3257,7 +3318,7 @@ html, body {
     padding-left: 15px;
 }
 
-/* Sub Headings */
+
 .area-subtitle {
     font-size: 24px;
     font-weight: 600;
@@ -3266,14 +3327,13 @@ html, body {
     color: #b68d40;
 }
 
-/* Paragraph Content */
 .area-text {
     font-size: 16px;
     margin-bottom: 18px;
     text-align: justify;
 }
 
-/* Services List */
+
 .area-list {
     margin-left: 20px;
     margin-bottom: 20px;
@@ -3284,7 +3344,7 @@ html, body {
     font-size: 16px;
 }
 
-/* Call to Action Box */
+
 .highlight-box {
     background-color: #002147;
     color: #fff;
@@ -3304,7 +3364,7 @@ html, body {
     margin-bottom: 20px;
 }
 
-/* CTA Button */
+
 .highlight-btn {
     display: inline-block;
     padding: 12px 25px;
@@ -3344,3 +3404,5 @@ html, body {
         padding: 30px 20px;
     }
 }
+
+/* Rajajinagar Page Styles */
