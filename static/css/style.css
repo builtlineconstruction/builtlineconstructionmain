@@ -3074,6 +3074,159 @@ html, body {
 }
 
 
+.insights-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 25px;
+}
+
+.insight-card {
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    text-decoration: none !important;
+    color: inherit;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.insight-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    border-color: orange;
+}
+
+.card-content {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.category-tag {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    color: orange;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+    display: block;
+}
+
+.insight-card h3 {
+    font-size: 1.25rem;
+    line-height: 1.5;
+    color: #333;
+    margin-bottom: 20px;
+    flex-grow: 1;
+}
+
+.card-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 15px;
+    border-top: 1px solid #f0f0f0;
+    color: #555;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.insight-card:hover .card-footer {
+    color: orange;
+}
+
+.card-footer i {
+    transition: transform 0.3s ease;
+}
+
+.insight-card:hover .card-footer i {
+    transform: translateX(8px);
+}
+
+@media (max-width: 768px) {
+    .expertise-header h2 { font-size: 2rem; }
+    .insights-grid { grid-template-columns: 1fr; }
+}
+.area-directory {
+    padding: 50px 0;
+    background: #f4f7f6; /* Light contrast from your main blog background */
+}
+
+.directory-box {
+    background: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    border-left: 5px solid orange; /* Your brand color */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.directory-header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.directory-header i {
+    font-size: 2.5rem;
+    color: orange;
+}
+
+.directory-header h3 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: #222;
+}
+
+.badge-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.area-badge {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #fff;
+    border: 1px solid #ddd;
+    padding: 10px 20px;
+    border-radius: 50px; /* Pill Shape */
+    text-decoration: none;
+    color: #444;
+    font-weight: 500;
+    min-width: 160px;
+    transition: all 0.3s ease;
+}
+
+.area-badge i {
+    font-size: 0.8rem;
+    opacity: 0.5;
+    transition: transform 0.3s ease;
+}
+
+.area-badge:hover {
+    border-color: orange;
+    color: orange;
+    background: #fff7ed;
+    box-shadow: 0 4px 12px rgba(255, 165, 0, 0.1);
+}
+
+.area-badge:hover i {
+    opacity: 1;
+    transform: translateX(5px);
+}
+
+@media (max-width: 768px) {
+    .area-badge {
+        width: 100%; /* Full width on mobile for better tapping */
+    }
+}
+
+
 
 /* career */
 .career-container{
@@ -3308,7 +3461,87 @@ html, body {
 }
 .area-maplinks{
     margin-top: 20px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
 }
+
+.service-locations-clean {
+    padding: 60px 0;
+    background-color: #fcfcfc;
+    border-top: 1px solid #eee;
+}
+
+.location-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.location-header h3 {
+    font-size: 1.8rem;
+    color: #222;
+    font-weight: 700;
+}
+
+.location-header .line {
+    width: 50px;
+    height: 3px;
+    background: orange;
+    margin: 15px auto;
+}
+
+.location-links-wrapper {
+    display: flex;
+    justify-content: space-evenly;
+    align-items:start !important;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.loc-col {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.loc-col a {
+    text-decoration: none;
+    color: #555;
+    font-size: 1.10rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+}
+
+.loc-col a i {
+    color: orange;
+    margin-right: 10px;
+    font-size: 0.9rem;
+    transition: transform 0.3s ease;
+}
+
+.loc-col a:hover {
+    color: orange;
+    transform: translateX(5px);
+}
+
+.loc-col a:hover i {
+    transform: scale(1.2);
+}
+
+@media (max-width: 768px) {
+    .location-links-wrapper {
+        flex-direction: column;
+        align-items: flex-start;
+        padding-left: 20%;
+    }
+}
+
+/*  */
 .area-title {
     font-size: 36px;
     font-weight: 700;
