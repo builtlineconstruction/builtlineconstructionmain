@@ -725,9 +725,8 @@ line-height: 1.6;
     justify-content: space-between;
     padding: 20px 3%;
     gap: 30px;
-    height: 70vh;
+    height: 86vh;
 }
-
 .footer-box{
     flex: 1 1 200px;   
     width: 200px;
