@@ -3215,7 +3215,7 @@ html, body {
 }
 .area-directory {
     padding: 50px 0;
-    background: #f4f7f6; /* Light contrast from your main blog background */
+    background: #f4f7f6; 
 }
 
 .directory-box {
@@ -3287,6 +3287,10 @@ html, body {
     .area-badge {
         width: 100%; /* Full width on mobile for better tapping */
     }
+}
+
+.table-card table tr td th{
+    border: 2px solid  #b68d40;
 }
 
 
