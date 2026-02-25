@@ -685,7 +685,7 @@ line-height: 1.6;
 }
 .counter-box{
     position: relative;
-    width: 220px;
+    width: 230px;
     margin-left: 0px;
     height: 100%;
 }
@@ -695,7 +695,7 @@ line-height: 1.6;
     width: 5px;
     height: 100%;  
     position: absolute;
-    left: -20px;
+    left: -10px;
     top: -0px;
 }
 .counter-box h2{
