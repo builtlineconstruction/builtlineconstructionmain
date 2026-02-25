@@ -456,6 +456,70 @@ body.scrolled .scroll-header {
     font-size: 18px;
     color: gray;
 }
+
+/* Container Spacing */
+.site-supervisor-container {
+    padding: 20px 0;
+    gap: 60px; 
+}
+
+.card-inner {
+    background: #ffffff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08); 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+.card-inner:hover {
+    transform: translateY(-10px); 
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+
+.supervisor-image {
+    width: 100%;
+    height: 400px; 
+    overflow: hidden;
+    background-color: #f4f4f4;
+}
+
+.supervisor-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+}
+
+/* Text Content */
+.site-designation {
+    padding: 20px;
+    /* border-top: 3px solid #007bff; */
+}
+
+.site-designation h3 {
+    margin: 0;
+    font-size: 1.4rem;
+    color: #333;
+    font-weight: 700;
+}
+
+.site-designation p {
+    margin: 5px 0 0;
+    color: #777;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Header Underline */
+.underline {
+    width: 60px;
+    height: 4px;
+    background: #007bff;
+    margin-top: 10px;
+    border-radius: 2px;
+}
 .proprietor-container {
     width: 100%;
     padding: 20px 40px;
