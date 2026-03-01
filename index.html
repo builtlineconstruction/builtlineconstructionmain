@@ -27,7 +27,7 @@
     <link rel="stylesheet" href="https://fonts.google.com/share?selection.family=Cairo:wght@200..1000">
     <link href="https://fonts.googleapis.com" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=SN+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
-
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
   <section class="section-container">
@@ -441,6 +441,36 @@
 
                 </div>
     </section>
+
+    <!-- performance graph -->
+
+    <section class="performance-section">
+        <div class="container">
+           <h2>Project Performance Overview</h2>
+          <p class="ft-3">Total Projects Across 8 Bangalore Zones</p>
+
+        <div class="chart-card">
+            <h3>Zonal Project Strength</h3>
+            <canvas id="zoneChart"></canvas>
+        </div>
+
+        <div class="performance-wrapper">
+          <div class="chart-card1" >
+            <h3>Completed vs Ongoing</h3>
+            <canvas id="statusChart"></canvas>
+        </div>
+
+        <div class="chart-card1">
+            <h3>All Type Services</h3>
+            <canvas id="projectTypePieChart"></canvas>
+        </div>
+
+        </div>
+        
+        </div>
+     
+    </section>
+
 
     <!-- trust -->
     <div class="brand-section" style="margin-top: -20px;">
@@ -1585,7 +1615,338 @@
     </script>
 
 
+<!-- performance graph -->
 
+<script>
+// ZONE DATA
+const zoneLabels = [
+    "North",
+    "North-West",
+    "West",
+    "South-West",
+    "South",
+    "South-East",
+    "East",
+    "North-East"
+];
+
+const zoneCounts = [8, 7, 6, 5, 9, 7, 6, 4];
+
+// ✅ 1 Project = 10 (Displayed as % but not real percentage logic)
+const zoneValues = zoneCounts.map(count => count * 10);
+
+
+// GREEN GRADIENT
+function createGreenGradient(ctx) {
+    const gradient = ctx.createLinearGradient(0, 0, 600, 0);
+    gradient.addColorStop(0, "#0f9d58");
+    gradient.addColorStop(1, "#34d399");
+    return gradient;
+}
+
+
+// HORIZONTAL CHART
+const zoneCtx = document.getElementById("zoneChart").getContext("2d");
+
+const zoneChart = new Chart(zoneCtx, {
+    type: "bar",
+    data: {
+        labels: zoneLabels,
+        datasets: [{
+            data: new Array(zoneCounts.length).fill(0),
+            backgroundColor: createGreenGradient(zoneCtx),
+            borderRadius: 10,
+            barThickness: 32
+        }]
+    },
+    options: {
+        indexAxis: "y",
+        responsive: true,
+        layout: {
+            padding: { right: 80 }
+        },
+        animation: {
+            duration: 2000,
+            easing: "easeOutQuart"
+        },
+        scales: {
+            x: {
+                beginAtZero: true,
+                max: 100,
+                ticks: {
+                    stepSize: 10,
+                    callback: function(value) {
+                        return value + "%";  // only add % symbol
+                    },
+                    color: "#333",
+                    font: { weight: "600" }
+                },
+                grid: {
+                    color: "rgba(0,0,0,0.05)"
+                }
+            },
+            y: {
+                ticks: {
+                    color: "#222",
+                    font: { size: 14, weight: "600" }
+                },
+                grid: { display: false }
+            }
+        },
+        plugins: {
+            legend: { display: false }
+        }
+    },
+    plugins: [{
+        id: "labels",
+        afterDatasetsDraw(chart) {
+            const { ctx } = chart;
+            ctx.save();
+            ctx.fillStyle = "#111";
+            ctx.font = "bold 14px Segoe UI";
+
+            chart.getDatasetMeta(0).data.forEach((bar, index) => {
+                const text = zoneValues[index] + "%";
+                ctx.fillText(text, bar.x + 8, bar.y + 4);
+            });
+
+            ctx.restore();
+        }
+    }]
+});
+
+
+// STATUS CHART
+const completed = 23;
+const ongoing = 28;
+
+// Same logic (×10 but shown as %)
+const statusValues = [
+    completed * 2,   // 84%
+    ongoing * 2      // 20%
+];
+
+const statusCtx = document.getElementById("statusChart").getContext("2d");
+
+const statusChart = new Chart(statusCtx, {
+    type: "bar",
+    data: {
+        labels: ["Completed", "Ongoing"],
+        datasets: [{
+            data: [0, 0],
+            backgroundColor: ["#16a34a", "#15803d"],
+            borderRadius: 12,
+            barThickness: 70
+        }]
+    },
+    options: {
+        responsive: true,
+        animation: {
+            duration: 2000,
+            easing: "easeOutQuart"
+        },
+        scales: {
+            y: {
+                beginAtZero: true,
+                max: 100,
+                ticks: {
+                    stepSize: 10,
+                    callback: function(value) {
+                        return value + "%";
+                    },
+                    color: "#333",
+                    font: { weight: "600" }
+                },
+                grid: {
+                    color: "rgba(0,0,0,0.05)"
+                }
+            },
+            x: {
+                ticks: {
+                    color: "#222",
+                    font: { weight: "600" }
+                },
+                grid: { display: false }
+            }
+        },
+        plugins: {
+            legend: { display: false }
+        }
+    },
+    plugins: [{
+        id: "valueLabels",
+        afterDatasetsDraw(chart) {
+            const { ctx } = chart;
+            ctx.save();
+            ctx.fillStyle = "#111";
+            ctx.font = "bold 15px Segoe UI";
+
+            const values = [
+                statusValues[0] + "%",
+                statusValues[1] + "%"
+            ];
+
+            chart.getDatasetMeta(0).data.forEach((bar, index) => {
+                ctx.fillText(values[index],
+                    bar.x - 30,
+                    bar.y - 10);
+            });
+
+            ctx.restore();
+        }
+    }]
+});
+
+// const completed = 28;
+// const ongoing = 32;
+
+// const statusValues = [
+//     completed * 2,   // 84%
+//     ongoing * 2      // 20%
+// ];
+
+
+// const barCtx = document.getElementById("statusBarChart").getContext("2d");
+
+// const statusBarChart = new Chart(barCtx, {
+//     type: "bar",
+//     data: {
+//         labels: ["Completed", "Ongoing"],
+//         datasets: [{
+//             data: [0, 0],
+//             backgroundColor: ["#16a34a", "#15803d"],
+//             borderRadius: 12,
+//             barThickness: 70
+//         }]
+//     },
+//     options: {
+//         responsive: true,
+//         animation: {
+//             duration: 200,
+//             easing: "easeOutQuart"
+//         },
+//         scales: {
+//             y: {
+//                 beginAtZero: true,
+//                 max: 100,
+//                 ticks: {
+//                     stepSize: 10,
+//                     callback: function(value) {
+//                         return value + "%";
+//                     }
+//                 }
+//             },
+//             x: {
+//                 grid: { display: false }
+                
+//             }
+//         },
+//         plugins: {
+//             legend: { display: false }
+//         }
+//     },
+//     plugins: [{
+//         id: "barLabels",
+//         afterDatasetsDraw(chart) {
+//             const { ctx } = chart;
+//             ctx.save();
+//             ctx.fillStyle = "#111";
+//             ctx.font = "bold 14px Segoe UI";
+
+//             const values = [
+//                 statusValues[10] + "%",
+//                 statusValues[1] + "%"
+//             ];
+
+
+//             chart.getDatasetMeta(0).data.forEach((bar, index) => {
+//                 ctx.fillText(
+//                     chart.data.datasets[0].data[index] + "%",
+//                     bar.x - 20,
+//                     bar.y - 20
+//                 );
+//             });
+
+//             ctx.restore();
+//         }
+//     }]
+// });
+
+
+// ==============================
+// PIE CHART – PROJECT TYPES
+// ==============================
+const pieCtx = document.getElementById("projectTypePieChart").getContext("2d");
+
+const projectTypePieChart = new Chart(pieCtx, {
+    type: "pie",
+    data: {
+        labels: ["Residential", "Commercial", "Interiors", "Renovation"],
+        datasets: [{
+            data: [60, 25, 10, 5],
+            backgroundColor: [
+                "#16a34a",  // Residential
+                "#22c55e",  // Commercial
+                "#4ade80",  // Interiors
+                "#bbf7d0"   // Renovation
+            ],
+            borderColor: "#ffffff",
+            borderWidth: 2
+        }]
+    },
+    options: {
+        responsive: true,
+        animation: {
+            duration: 2000
+        },
+        plugins: {
+            legend: {
+                position: "bottom"
+            },
+            tooltip: {
+                callbacks: {
+                    label: function(context) {
+                        return context.label + " - " + context.raw + "%";
+                    }
+                }
+            }
+        }
+    }
+});
+
+
+// ==============================
+// LOAD ANIMATION
+// ==============================
+// window.onload = function () {
+//     statusBarChart.data.datasets[0].data = [completed, ongoing];
+//     statusBarChart.update();
+// };
+
+
+// Animate
+// window.onload = function () {
+//     zoneChart.data.datasets[0].data = zoneValues;
+//     zoneChart.update();
+
+//     statusChart.data.datasets[0].data = statusValues;
+//     statusChart.update();
+// };
+
+window.onload = function () {
+
+    // Animate Zone Chart
+    zoneChart.data.datasets[0].data = zoneValues;
+    zoneChart.update();
+
+    // Animate Status Bar Chart
+    // statusBarChart.data.datasets[0].data = [completed, ongoing];
+    // statusBarChart.update();
+
+    statusChart.data.datasets[0].data = statusValues;
+    statusChart.update();
+};
+</script>
 
 
 
