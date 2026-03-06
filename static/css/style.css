@@ -739,7 +739,8 @@ line-height: 1.6;
 
 .counter-container{
     display: flex;
-    justify-content: space-between;
+    /* justify-content: space-between; */
+    
     padding: 40px 0px;
     background-color: white;
     height: fit-content;
