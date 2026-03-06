@@ -3789,4 +3789,10 @@ html, body {
     }
 }
 
+/* FAQ */
+.main{
+    height: fit-content !important;
+    padding: 20px 5%;
 
+
+}
