@@ -460,3 +460,77 @@ window.onload = function () {
 </script>
 </body>
 </html>
+
+
+
+.hero{
+    position: relative;
+     height: 100vh;      
+    display: flex;
+    align-items: center;
+    padding: 0 10%;
+    background: grayscale(100%) brightness(0.4);
+    width: 100vw;
+    overflow: hidden;
+    position: relative;
+    /* top: -150px; */
+}
+.hero::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url(../image/hero-image1.webp) ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    transform: translateX(100%);
+    transition: transform 1.8s ease;
+    z-index: 0;
+    overflow-x: hidden;
+    width: 100%;
+     min-height: 100vh;      
+}
+.hero.show-bg::before{
+    transform: translateX(0);
+    overflow: hidden;
+}
+.hero-content {
+    text-align: center;
+    opacity: 0;  
+    font-family: Caudex;
+
+}
+
+.hero-content::before{
+    content: "";
+    position: absolute;
+    width: 110%;
+    height: 200vh;
+    /* background-color: rgba(236, 233, 233, 0.7); */
+    top: -380px;
+    left: 10px;
+    opacity: 1;  
+    z-index: -1;
+}
+.hero-content h1{
+    font-size: 3vw;
+    animation: slideText 1s ease;
+    min-height: 100px;
+    margin-bottom: -10px;
+    text-shadow:
+    1px 1px 2px rgba(255, 255, 255, 0.899),
+    3px 3px 6px rgba(255,255,255,0.2);
+}
+
+.hero-content.show-text {
+    animation: fadeInText 1.5s ease forwards;
+}
+
+@keyframes fadeInText {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

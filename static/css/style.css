@@ -231,54 +231,25 @@ body.scrolled .scroll-header {
 }
 
 /* hero */
-.hero{
-    position: relative;
-     height: 100vh;      
-    display: flex;
-    align-items: center;
-    padding: 0 10%;
-    background: grayscale(100%) brightness(0.4);
-    width: 100vw;
-    overflow: hidden;
-    position: relative;
-    /* top: -150px; */
-}
-.hero::before{
+.hero::before {
     content: "";
     position: absolute;
-    inset: 0;
-    background-image: url(../image/hero-image1.png) ;
+    /* inset: 0 is shorthand for top, bottom, left, right: 0 */
+    inset: 0; 
+    background-image: url(../image/hero-image1.webp);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    transform: translateX(100%);
-    transition: transform 1.8s ease;
-    z-index: 0;
-    overflow-x: hidden;
     width: 100%;
-     min-height: 100vh;      
-}
-.hero.show-bg::before{
-    transform: translateX(0);
-    overflow: hidden;
-}
-.hero-content {
-    text-align: center;
-    opacity: 0;  
-    font-family: Caudex;
-
-}
-
-.hero-content::before{
-    content: "";
-    position: absolute;
-    width: 110%;
-    height: 200vh;
-    /* background-color: rgba(236, 233, 233, 0.7); */
-    top: -380px;
-    left: 10px;
-    opacity: 1;  
-    z-index: -1;
+    height: 100%;
+    
+    /* Apply filters here so the text stays white/clear */
+    filter: grayscale(100%) brightness(-0.9); 
+    
+    opacity: 0;
+    /* Use the slide animation instead of just fadeIn */
+    animation: slideFromLeft 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+    z-index: 0; /* Ensures background stays behind content */
 }
 .hero-content h1{
     font-size: 3vw;
@@ -290,18 +261,8 @@ body.scrolled .scroll-header {
     3px 3px 6px rgba(255,255,255,0.2);
 }
 
-.hero-content.show-text {
-    animation: fadeInText 1.5s ease forwards;
-}
 
-@keyframes fadeInText {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
+/* Keep your other styles (h1, hero-btn, etc.) as they were */
 
 .hero-content p{
     font-size: 25px;

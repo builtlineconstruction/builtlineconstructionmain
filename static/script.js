@@ -41,24 +41,24 @@ setInterval(() => {
 //      },4000);
 // })
 
-window.addEventListener('load', () => {
-    const hero = document.querySelector(".hero");
-    const text = document.querySelector(".hero-content");
-    const image = document.querySelector(".Image");
+// window.addEventListener('load', () => {
+//     const hero = document.querySelector(".hero");
+//     const text = document.querySelector(".hero-content");
+//     const image = document.querySelector(".Image");
 
-    setTimeout(() => {
-        hero.classList.add("show-bg");
-    }, 1000);
+//     setTimeout(() => {
+//         hero.classList.add("show-bg");
+//     }, 100);
 
-    setTimeout(() => {
-        text.classList.add("show-text");  
-    }, 3000);
+//     setTimeout(() => {
+//         text.classList.add("show-text");  
+//     }, 1000);
 
-    setTimeout(() => {
-        image.classList.add("showImage");
-        image.style.display = "block";
-    }, 4000);
-});
+//     setTimeout(() => {
+//         image.classList.add("showImage");
+//         image.style.display = "block";
+//     }, 2000);
+// });
 
 
 
