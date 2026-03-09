@@ -1032,6 +1032,7 @@ line-height: 1.6;
     justify-content: space-between;
     margin-top: 20px;
     margin-bottom: 20px;
+    flex-wrap: wrap !important;
 }
 .text-box h5, .text-icons h5{
     font-size: 16px;
