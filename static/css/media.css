@@ -61,6 +61,7 @@
     }
     .hero{
         width: 100%;
+        height: fit-content;
     }
     .hero::before{
         transform: translateX(150%);
@@ -76,25 +77,26 @@
         max-width: 700px;
         /* height: 300px; */
     }
-    .hero-content{
-       position: relative; 
-       left: -10px;
+    .hero-mainContent{
+        height: fit-content;
+       flex-direction: column;
+        /* z-index: -1;  */
+    }   
+    .hero-content {
+      
+       
        width: 100%;
         
+    }
+    .heroForm{
+        margin-bottom: 20px;
     }
     .hero-content h1{
         font-size: 25px;
         margin-bottom: 30px;
         
     }
-    .hero-content::before{
-         width: 70%;
-         top: -380px;
-         left: -60px;
-         height: auto;
-         z-index: -4;
-
-    }
+  
     /*scroll navbar */
     .scroll-header{
         position: relative;
@@ -471,8 +473,20 @@
     .scroll-container navbar a{
         font-size: 13px;
     }
+    .hero-mainContent{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* z-index: -1;  */
+}
+      
     .hero{
-        margin-top: -110px;
+        height: fit-content;
+    }
+    .hero-form{
+        margin-top: 0;
+        width: 500px;
+        height: fit-content;
     }
    
     .hero-content h1{
@@ -851,6 +865,16 @@
     .copyright{
         height: fit-content;
     }
+       
+    .hero{
+        height: fit-content;
+    }
+    .hero-form{
+        margin-top: 200px;
+        width: 500px;
+        height: fit-content;
+    }
+   
     
    
 }

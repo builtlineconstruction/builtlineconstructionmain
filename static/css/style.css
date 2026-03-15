@@ -13,10 +13,6 @@ h1, h2, h3, h4, h5, h6{
 body p{
     font-family: 'Roboto', sans-serif !important;
 }
-/* p{
-    font-family: SN Pro!important;
-    
-} */
 html, body {
   overflow-x: hidden;
 }
@@ -142,7 +138,7 @@ header nav a:hover, .scroll-container navbar a:hover{
 .nav-dropdown.active .dropdown-menu {
   display: block;
 }
-nav button{
+/* nav button{
     background-color: darkgoldenrod;
     color: white;
     padding: 15px 0px;
@@ -156,6 +152,117 @@ nav button a:hover{
     padding: 15px;
     border-radius: 50px;
 
+} */
+.class-btn{
+display:inline-flex;
+align-items:center;
+justify-content:space-between;
+gap:20px;
+padding:6px 6px 6px 25px;
+
+background:#2f3747;
+color:white;
+text-decoration:none;
+border: 1px solid #2f3747;
+border-radius:50px;
+font-weight:600;
+
+position:relative;
+overflow:hidden;
+
+transition:0.4s;
+}
+
+.class-btn i{
+background:#ff6a1a;
+color:white;
+width:45px;
+height:45px;
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+border-radius:50%;
+
+transition:0.4s;
+font-size:18px;
+transform:rotate(-45deg);
+}
+
+.class-btn:hover{
+    background:#fff;
+    color:#1f2a36;
+}
+
+.class-btn:hover i{
+    transform:rotate(4deg);
+}
+
+/*  */
+
+.fill-btn{
+position:relative;
+display:inline-flex;
+align-items:center;
+justify-content:space-between;
+gap:20px;
+
+padding:6px 6px 6px 25px;
+/* width:2-0px; */
+border: 2px solid #002147;
+background:#2f3747;
+color:white;
+
+border-radius:50px;
+text-decoration:none;
+font-weight:600;
+
+overflow:hidden;
+}
+
+.fill-btn span,
+.fill-btn .icon{
+position:relative;
+z-index:2;
+}
+
+.fill-btn .icon{
+background:#ff6a1a;
+width:45px;
+height:45px;
+display:flex;
+align-items:center;
+justify-content:center;
+transform:rotate(-45deg);
+border-radius:50%;
+color:white;
+transition:0.4s;
+}
+
+.fill-btn::before{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:0px;
+    width:100%;
+    height:0;
+    background:white;
+    transition:0.4s ease;
+    z-index:1;
+    
+}
+
+.fill-btn:hover::before{
+height:100%;
+}
+
+.fill-btn:hover{
+color: #002147;
+}
+
+.fill-btn:hover .icon{
+transform:rotate(4deg);
 }
 
 /* scroll navbar */
@@ -196,12 +303,15 @@ nav button a:hover{
   font-weight: 600;
   color: #111;
 }
+.scroll-container navbar .class-btn{
+    color: white;
+}
 
 .scroll-container navbar span {
   color: #c99700; 
 }
 
-.scroll-container navbar button {
+/* .scroll-container navbar button {
   background: #c99700;
   border: none;
   padding: 10px 20px;
@@ -212,7 +322,7 @@ nav button a:hover{
   color: #fff;
   text-decoration: none;
   font-weight: 600;
-}
+} */
 
 .scroll-header {
   transition: transform 0.3s ease, opacity 0.3s ease;
@@ -231,10 +341,19 @@ body.scrolled .scroll-header {
 }
 
 /* hero */
+.hero {
+    position: relative;
+    height: 100vh;      
+    display: flex;
+    align-items: center;
+    padding: 0 8%;
+    width: 100vw;
+    overflow: hidden;
+}
+
 .hero::before {
     content: "";
     position: absolute;
-    /* inset: 0 is shorthand for top, bottom, left, right: 0 */
     inset: 0; 
     background-image: url(../image/hero-image1.webp);
     background-repeat: no-repeat;
@@ -242,20 +361,73 @@ body.scrolled .scroll-header {
     background-position: center;
     width: 100%;
     height: 100%;
-    
-    /* Apply filters here so the text stays white/clear */
     filter: grayscale(100%) brightness(-0.9); 
-    
     opacity: 0;
-    /* Use the slide animation instead of just fadeIn */
     animation: slideFromLeft 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
-    z-index: 0; /* Ensures background stays behind content */
+    z-index: 0; 
+}
+
+.hero-mainContent{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* z-index: -1;  */
+}
+      
+
+
+
+.hero-content {
+    text-align: left;
+    font-family: Caudex;
+    width: 600px;
+    margin-top: 60px;
+    animation: fadeInText 0.9s ease forwards;
+    animation-delay: 1s;
+    
+}
+.hero-content::before{
+    content: "";
+    position: absolute;
+    width: 110%;
+    height: 200vh;
+    /* background-color: rgba(236, 233, 233, 0.7); */
+    top: -380px;
+    left: 10px;
+    opacity: 1;  
+    /* z-index: -1; */
+}
+
+/* --- NEW ANIMATION KEYFRAMES --- */
+
+@keyframes slideFromLeft {
+    0% {
+        transform: translateX(100%); /* Start completely off-screen left */
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0); /* End perfectly in center */
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInText {
+    /* to {
+        opacity: 1;
+        transform: translateY(0);
+    } */
+        from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 .hero-content h1{
     font-size: 3vw;
     animation: slideText 1s ease;
     min-height: 100px;
-    margin-bottom: -10px;
+    margin-bottom: 10px;
     text-shadow:
     1px 1px 2px rgba(255, 255, 255, 0.899),
     3px 3px 6px rgba(255,255,255,0.2);
@@ -287,7 +459,70 @@ body.scrolled .scroll-header {
     transition: 1.5s ease;
 
 }
+.hero-form{
+    position: sticky;
+    width:400px;
+    height: 540px;
+    background:#fff;
+    z-index: 1; 
+    padding:20px 30px;
+    border-radius:20px;
+    box-shadow:0 20px 40px rgba(0,0,0,0.1);
+    margin-top: 90px;
+    border-bottom: 5px solid #ff6427;
+}
 
+.hero-form h2{
+    text-align:center;
+    color:#b8860b;
+    font-size:20px;
+    margin-bottom:30px;
+}
+
+.hero-form input,
+.hero-form select,
+.hero-form textarea{
+    width:100%;
+    border:none;
+    border-bottom:1px solid #ccc;
+    padding:12px 5px;
+    margin-bottom:20px;
+    background:transparent;
+    font-size:15px;
+    outline:none;
+}
+
+
+.form-row{
+    display:flex;
+    gap:15px;
+}
+
+.hero-form textarea{
+    border:1px solid transparent;
+    border-radius:4px;
+    padding:10px;
+    resize:none;
+    border-bottom:1px solid #ccc;
+}
+
+.hero-form button{
+    width:100%;
+    background:#ff6427;
+    color:white;
+    padding:14px;
+    border:none;
+    border-radius:40px;
+    font-size:16px;
+    font-weight:600;
+    margin-bottom: 40px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.hero-form button:hover{
+background:#e4531d;
+}
 /* about */
 .about-section .container {
   padding-left: 0;
@@ -817,7 +1052,7 @@ line-height: 1.6;
     margin-top: 20px;
 }
 .icons i{
-    color: #fff;
+    /* color: #fff; */
     font-size: 25px;
     transition: transform 0.3s ease, color 0.3s ease;
 
@@ -825,6 +1060,7 @@ line-height: 1.6;
 .icons i:hover{
     transform: scale(1.3);
 }
+/* 
 .fa-facebook-f:hover{
     color: #006eff;
 }
@@ -839,7 +1075,7 @@ line-height: 1.6;
 }
 .fa-linkedin-in:hover{
     color: #005f93;
-}
+} */
 .footer-links a{
     display: block;
     padding: 10px;
@@ -3757,4 +3993,112 @@ html, body {
     padding: 20px 5%;
 
 
+}
+/*  */
+
+.icons{
+    display:flex;
+    gap:20px;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    margin-top: 200px;
+}
+
+.icons a{
+    position:relative;
+    width:150px;
+    height:50px;
+    background:#fff;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-decoration:none;
+    color:#333;
+    font-size:25px;
+    transition:0.3s;
+    box-shadow:0 4px 10px rgba(0,0,0,0.1);
+    padding: 10px;
+}
+
+/* Hover background colors */
+
+.icons a:nth-child(1):hover{
+background:#1877f2;
+color:#fff;
+}
+.icons a:nth-child(1):after{
+    background:#1877f2;
+}
+
+
+.icons a:nth-child(2):hover{
+background:#e4405f;
+color:#fff;
+}
+.icons a:nth-child(2):after{
+    background:#e4405f;
+}
+
+
+.icons a:nth-child(3):hover{
+background:#1877f2;
+color:#fff;
+}
+.icons a:nth-child(3):after{
+    background:#1877f2;
+}
+
+
+.icons a:nth-child(4):hover{
+background:#ff0000;
+color:#fff;
+}
+.icons a:nth-child(4):after{
+    background:#ff0000;
+}
+
+.icons a:nth-child(5):hover{
+background:#0077b5;
+color:#fff;
+}
+.icons a:nth-child(5):after{
+    background:#0077b5;
+}
+
+/* Tooltip */
+
+.icons a::after{
+    content:attr(data-name);
+    position:absolute;
+    top:-40px;
+    color:#fff;
+    padding:6px 12px;
+    font-size:14px;
+    border-radius:6px;
+    opacity:0;
+    pointer-events:none;
+    transform:translateY(10px);
+    transition:0.3s;
+}
+
+/* Tooltip arrow */
+
+.icons a::before{
+    content:"";
+    position:absolute;
+    top:-10px;
+    border:6px solid transparent;
+    border-top-color:#e4405f;
+    opacity:0;
+    transition:0.3s;
+}
+
+/* Show tooltip on hover */
+
+.icons a:hover::after,
+.icons a:hover::before{
+opacity:1;
+transform:translateY(0);
 }

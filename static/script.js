@@ -158,21 +158,23 @@ document.getElementById("year").textContent = new Date().getFullYear();
 // Select the scroll button
 const scrollBtn = document.querySelector(".scroll-btn");
 
-window.addEventListener("scroll", function () {
-    if (window.scrollY > 200) {
-        scrollBtn.style.display = "block";
-    } else {
-        scrollBtn.style.display = "none";
-    }
-});
+// window.addEventListener("scroll", function () {
+//     if (window.scrollY > 200) {
+//         scrollBtn.style.display = "block";
+//     } else {
+//         scrollBtn.style.display = "none";
+//     }
+// });
 
-
-scrollBtn.addEventListener("click", function () {
-    window.scrollTo({
-        top: 0,
-        behavior: "smooth"
-    });
-});
+// function scrollBtn(){
+//     window.scrollTo({
+//         top: 0,
+//         behavior: "smooth"
+//     });
+// }
+// scrollBtn.addEventListener("click", function () {
+    
+// });
 
 // scroll up homepage button js code
 
