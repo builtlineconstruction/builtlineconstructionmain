@@ -837,11 +837,12 @@
         bottom: 0px;
     }
     .footer-container{
-        height: 160vh;
+        height: 210vh;
         flex-wrap: wrap;
     }
     .footer-box{
          flex-wrap: wrap;
+         
     }
       /* get a quote */
     
