@@ -776,6 +776,32 @@
     .btn-outline{
         padding: 15px 15px;
     }
+
+    .landing-nav{
+        flex-direction: column;
+        height: fit-content;
+        flex-wrap: wrap;
+        
+    }
+    .landing-nav p,.landing-nav  img,.landing-nav  a {
+        /* margin-bottom: 20px; */
+        font-size: 17px;
+    }
+    .landing-hero{
+        flex-direction: column;
+        height: fit-content;
+        margin-top: 220px;
+    }
+    .landing-nav p,.landing-nav  img,.landing-nav  a {
+        margin-bottom: 20px;
+        font-size: 15px;
+    }
+     .animated-button{
+        padding: 7px 36px;
+    }
+    .landing-nav a span{
+         font-size: 15px;
+    }
     
 
 
@@ -941,251 +967,3 @@
     
    
 }
-/* 
-@media (min-width:1400px) and (max-width:10000px){
-    .section-container{
-        width: 100%;
-        max-width: 3000px;
-    }
-    header{
-        height: 200px;
-    }
-    header img{
-        width: 400px;
-        height: 400px;
-    }
-    nav{
-        flex-wrap: wrap;
-        position: fixed;
-        left: 30%;
-        z-index: 22;
-        padding: 20px 10px;
-    }
-    nav a{
-        font-size: 2rem;
-        padding: 60px 40px;
-        cursor: pointer;
-    }
-    nav a:hover{
-        color: darkgoldenrod;
-        transition: all 0.8s ease;
-    } 
-    .hero-content{
-        width: 200%;
-        position: relative;
-        margin: 0;
-    }
-    .hero-content h1{
-        font-size: 5rem;
-        width: 70vw;
-    }
-    .hero-content::before{
-        position: absolute;
-        top: -500%;
-        height: 220vh;
-        width: 80vw;
-    }
-    .hero-content p{
-        font-size: 3rem;
-        width: 70vw;
-    }
-    .btn{
-        font-size: 2rem;
-    }
-    .about-section{
-        height: fit-content;
-        flex-wrap: wrap;  
-    }
-    .about-content{
-        height: auto;
-        max-width: auto;
-        width: 100%;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        align-items: center;
-        flex-direction: row;
-    }
-    .aboutText p{
-        font-size: 2rem;
-        width: 1000px;
-
-    }
-    .about-image{
-       width: 100%;
-       position: relative;
-       z-index: 2;
-    }
-    .about-image img{
-        width: 100%;
-        height: 800px;
-        z-index: 0;
-    }
-    .about-section h1{
-        font-size: 4rem;
-    }
-    .counter-box{
-        width: fit-content;
-        height: fit-content;
-        
-    }
-    .counter-box h2{
-        font-size: 8rem;
-    }
-    .counter-box h3{
-        font-size: 2rem;
-    }
-    .counter-box p{
-        font-size: 1.5rem;
-    }
-    .counter-box::before{
-        height: 400px;
-        width: 7px;
-    }
-    .footer-container{
-        height: fit-content;
-    }
-     .footer-box{
-        width: 300px;
-        height: 500px;
-     }
-    .footer-box h3{
-        font-size: 2rem;
-    }
-    .footer-box h4{
-        font-size: 22px;
-    }
-    .footer-box h2{
-        font-size: 30px;
-    }
-    .footer-box p{
-        font-size: 25px;
-    }
-    .icons i{
-        font-size: 40px;
-    }
-    .footer-links a{
-        font-size: 30px;
-    }
-    .contact-content{
-     max-width: 1500px;
-     margin-top: 30px;
-     margin-bottom: 40px;
-    
-    }
-    .contact-text h1{
-        font-size: 3vw;
-        width: 100%;
-    }
-    .text-box h5, .text-icons h5{
-        font-size: 2vw;
-    }
-    .text-box p{
-        font-size: 1.2vw;
-    }
-    .text-icons{
-        position: relative;
-        left: -190px;
-    }
-    .text-icons a{
-        font-size: 1.3vw;
-        margin: 20px;
-        padding: 15px;
-    }
-    .contact-container{
-        max-width: 1700px;
-        padding: 10px;
-        height: fit-content;
-        padding: 20px;
-    }
-    .contact-container h1{
-        font-size: 3vw;
-    }
-    .subtitle{
-        font-size: 1.3vw;
-    }
-    .form-box{
-        display: flex;
-        width: 100%;
-    }
-    .contact-form input, select,textarea{
-        width: 100%;
-        padding: 25px 30px;
-        font-size: 1.3vw;
-    }
-    .radio-row label, input{
-        font-size: 1.2vw;
-        padding: 20px;
-    }
-    .contact-form select option{
-        width: 100px;
-    }
-    .contact-btn{
-        font-size: 1.2vw;
-        max-width: 600px;
-    }
-    .carousel{
-        margin: 40px 300px;
-        width: 80%;
-        padding: 20px 10%;
-        overflow-x: auto;
-        
-       
-    }
-    .group{
-        width: calc(6 * 300px + 40px);
-        animation: spin 5s linear infinite;
-        margin-top: 80px;
-    }
-    .card{
-        height: 17em;
-        width: max-content;
-    }
-    .card img{
-        width: 230px;
-    }
-    @keyframes spin{
-        0% {
-            translate: 0;
-        }
-        100%{
-            translate: -30%;
-        }
-    }
-
-   .template-container{
-        width: 100%;
-        padding: 20px 7%;
-    }
-    .expertise-container{
-        margin: 0;
-        padding: 0;
-    }
-    .template-box{
-        width: 100%;
-    }
-     .scroll-btn{
-        width: 0;
-        height: 0;
-    }
-    .scroll-btn i{
-        position: fixed;
-        right: 0px;
-        top: 900px;
-        bottom: 0px;
-    }
-    .footer-container{
-        height: 700px;
-    }
-    .testimonials-wrapper{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 80%;
-    }
-     .projectImage{
-        flex-wrap: wrap;
-        height: fit-content;
-    }
-    
-} */
