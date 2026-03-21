@@ -194,10 +194,7 @@
         height: 210px;
         top: 0px;
     }
-    .counter-box h2{
-        font-size: 70px;
-        margin-top: 20px;
-    }
+  
     .counter-container{
         flex-wrap: wrap;
         height: fit-content;
@@ -627,10 +624,7 @@
         padding: 0;
         margin-bottom: 10px;
     }
-    .counter-box h2{
-        margin-top: 30px;
-        font-size: 80px;
-    } 
+    
    
     .contact-footer{
         position: relative;
@@ -856,31 +850,28 @@
         width: 100%;
         height: 100%;
     }
-    .about-content, .counter-container, .footer-container{
+    .about-content, .footer-container{
         flex-wrap: wrap;
         justify-content: space-between;
         display: flex;
-        height: fit-content;
+        height: fit-content ;
         
     }
 
     .counter-box{
         position: relative;
         margin-top: 30px;
-        width: 200px;
+        width: 100%;
+        height: 100%;
     }
     .counter-box h2{
-        font-size: 5rem;
+        font-size: 2rem;
     }
-    .counter-box::before{
-       position: absolute;
-       left: -20px;
-       height: 280px;
-    }
+    
     .counter-container{
         flex-direction: row;
         flex-wrap: wrap;
-        height: fit-content !important;
+        /* height: fit-content !important; */
     }
     .template-container{
         padding: 0px 0px;

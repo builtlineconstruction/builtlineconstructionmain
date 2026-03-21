@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Project Performance Dashboard</title>
-    <link rel="stylesheet" href="style.css">
+   
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+
 </head>
 <style>
   .performance-section {
@@ -54,23 +56,23 @@ h2 {
     margin-bottom: 10px;
 }
 
-p {
+/* p {
     text-align: center;
     color: black;
     margin-bottom: 60px;
-}
+} */
 .performance-wrapper{
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background: #ffffff;
-  padding: 30px;
-  gap: 20px;
-  border-radius: 16px;
-  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
-  border: 1px solid #eeeeee;
-  margin-bottom: 40px;
-  height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #ffffff;
+    padding: 30px;
+    gap: 20px;
+    border-radius: 16px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+    border: 1px solid #eeeeee;
+    margin-bottom: 40px;
+    height: fit-content;
 
 
 }
@@ -96,6 +98,105 @@ p {
     font-size: 20px;
     font-weight: bold;
    
+}
+
+/* From Uiverse.io by Javierrocadev */ 
+.card {
+  width: 350px;
+  height: 370px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 10px;
+  background-color: #fffffe;
+  border-radius: 15px;
+  position: relative;
+  overflow: hidden;
+  box-shadow:0 15px 35px rgba(0,0,0,0.12);
+}
+
+.card::before {
+  content: "";
+  width: 350px;
+  height: 90px;
+  position: absolute;
+  top: 0;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  border-bottom: 3px solid #fefefe;
+  background: linear-gradient(40deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+  transition: all 0.5s ease;
+}
+
+.card * {
+  z-index: 1;
+}
+
+.image {
+  width: 90px;
+  height: 150px;
+  border-radius: 50%;
+  border: 4px solid #fefefe;
+  margin-top: 30px;
+  transition: all 0.5s ease;
+  
+}
+
+.card-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  transition: all 0.5s ease;
+  
+}
+
+.card-info span {
+  font-weight: 600;
+  font-size: 24px;
+  color: #161A42;
+  margin-top: 15px;
+  line-height: 5px;
+}
+
+.card-info p {
+  color: rgba(0, 0, 0, 0.5);
+  width: 250px;
+}
+
+.button {
+  text-decoration: none;
+  background-color: #1468BF;
+  color: white;
+  padding: 5px 20px;
+  border-radius: 5px;
+  border: 1px solid white;
+  transition: all 0.5s ease;
+}
+.card:hover::before {
+  width: 360px;
+  height: 360px;
+  border-bottom: none;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  transform: scale(0.95);
+
+}
+
+.card:hover .card-info {
+  transform: translate(0%,-25%);
+}
+
+.card:hover .image {
+  transform: scale(2) translate(-80%,-20%);
+  object-fit: cover;
+}
+
+.button:hover {
+  background-color: #FF6844;
+  transform: scale(1.1);
 }
 </style>
 <body>
@@ -458,6 +559,24 @@ window.onload = function () {
     statusChart.update();
 };
 </script>
+
+<div class="card">
+  <!-- <div class="image"></div> -->
+   <img src="static/image/client1.jpg" class="image" alt="">
+  <div class="card-info">
+    <span>George Johnson</span>
+    <p>We hired Builtline Construction for a major kitchen remodel, and they exceeded our expectations. The team was fantastic. They were clean, punctual, and highly skilled.</p>
+  </div>
+   <div class="stars">
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+   </div>
+   <a href="https://www.google.com/maps/contrib/106536467711838252489/reviews?hl=en-GB" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-google google-link" class="button"></i></a>
+</div>
+
 </body>
 </html>
 
