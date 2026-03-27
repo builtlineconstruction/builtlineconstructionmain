@@ -460,7 +460,24 @@
         flex-direction: column;
         margin-top: 20px;
     }
-    
+    /* landing page */
+    .card-row {
+        flex-direction: column;
+        flex-wrap: wrap;
+
+    }
+    .thankyou-container{
+        height: fit-content;
+    }
+    .thankyou-card{
+         display: flex;
+         flex-wrap: wrap;
+         width: 100%;
+         padding-right: 20px;
+    }
+    .background-diagonal{
+        height: fit-content;
+    }
 
 }
 /* tables */
@@ -796,6 +813,11 @@
     .landing-nav a span{
          font-size: 15px;
     }
+    /* thankyou page */
+     .background-diagonal{
+        height: fit-content;
+    }
+
     
 
 

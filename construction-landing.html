@@ -180,16 +180,16 @@
                     </div>
                 </div>
 
-                <div class="hero-right" id="contact">
+                <div class="hero-right">
                     <h2>Get Your Free Quote</h2>
                     <p>No obligation. Response within 2 hours.</p>
 
-                    <form>
-                        <input type="text" placeholder="Your full name">
-                        <input type="tel" placeholder="+91 98765 43210">
-                        <input type="text" placeholder="Area / Location">
+                    <form id="landing-form">
+                        <input type="text" id="fullname" placeholder="Your full name">
+                        <input type="tel" id="number" placeholder="+91 98765 43210">
+                        <input type="text" id="area" placeholder="Area / Location">
 
-                        <select>
+                        <select id="project">
                             <option>Select a service</option>
                             <option>Construction</option>
                             <option>Renovation</option>
@@ -197,7 +197,7 @@
                             <option>Architecture</option>
                         </select>
 
-                        <select>
+                        <select id="package">
                             <option>Select plot size</option>
                             <option>1200 sqft</option>
                             <option>1500 sqft</option>
@@ -948,7 +948,7 @@
         </div>
     </footer>
 
-    <a class="styled-wrapper" href="index.html">
+        <!-- <a class="styled-wrapper" href="index.html">
         <button class="back-btn">
             <div class="button-box">
             <span class="button-elem">
@@ -977,7 +977,7 @@
             </span>
             </div>
         </button>
-    </a>
+    </a> -->
 
 
 
@@ -1017,17 +1017,6 @@
         <!--  -->
     </div>
 </section>
-
-   
-
-
-
-
-
-
-
-
- 
 
   <!-- script links -->
    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
@@ -1087,7 +1076,7 @@
  <script>
     (function() {
             emailjs.init({
-              publicKey: "6upSXP_XXdZIVKN27",
+              publicKey: "Tnys6_gU2HReybjDn",
             });
         })();
  </script>
@@ -1095,31 +1084,30 @@
     <script>
         
 
-        document.getElementById("homeForm").addEventListener("submit", function(e){
+        document.getElementById("landing-form").addEventListener("submit", function(e){
 
         e.preventDefault();
 
-        let fname = document.getElementById("firstname").value.trim()
-        let lname = document.getElementById("lastname").value.trim()
-        let email = document.getElementById("email").value.trim()
-        let phone = document.getElementById("phone").value.trim()
+        let fullname = document.getElementById("fullname").value.trim();
+        let number = document.getElementById("number").value.trim();
+        let area = document.getElementById("area").value.trim();
         let project = document.getElementById("project").value;
-        let message = document.getElementById("message").value.trim();
+        let packages = document.getElementById("package").value;
 
         let submit_form = {
-            my_fname:fname,
-            my_lname:lname,
-            my_email:email,
-            my_phone:phone,
+            my_fname:fullname,
+            my_number:number,
+            my_area:area,
             my_project:project,
-            my_message:message
+            my_package:packages
         }
 
-        emailjs.send("service_l3mndkx","template_w72pjn5",submit_form)
+        emailjs.send("service_f4ow8xg","template_cacg6yn",submit_form)
 
         .then(function(){
             alert("Quote request sent successfully!");
-            document.getElementById("homeForm").reset();
+            document.getElementById("landing-form").reset();
+            window.location.href = "thankyou.html";
 
         }, function(error){
             alert("Failed to send message");
