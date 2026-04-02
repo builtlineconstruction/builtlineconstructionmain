@@ -154,40 +154,40 @@ nav button a:hover{
 
 } */
 .class-btn{
-display:inline-flex;
-align-items:center;
-justify-content:space-between;
-gap:20px;
-padding:6px 6px 6px 25px;
+    display:inline-flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:20px;
+    padding:6px 6px 6px 25px;
 
-background:#2f3747;
-color:white;
-text-decoration:none;
-border: 1px solid #2f3747;
-border-radius:50px;
-font-weight:600;
+    background:#2f3747;
+    color:white;
+    text-decoration:none;
+    border: 1px solid #2f3747;
+    border-radius:50px;
+    font-weight:600;
 
-position:relative;
-overflow:hidden;
+    position:relative;
+    overflow:hidden;
 
-transition:0.4s;
+    transition:0.4s;
 }
 
 .class-btn i{
-background:#ff6a1a;
-color:white;
-width:45px;
-height:45px;
+    background:#ff6a1a;
+    color:white;
+    width:45px;
+    height:45px;
 
-display:flex;
-align-items:center;
-justify-content:center;
+    display:flex;
+    align-items:center;
+    justify-content:center;
 
-border-radius:50%;
+    border-radius:50%;
 
-transition:0.4s;
-font-size:18px;
-transform:rotate(-45deg);
+    transition:0.4s;
+    font-size:18px;
+    transform:rotate(-45deg);
 }
 
 .class-btn:hover{
@@ -1499,7 +1499,7 @@ input, textarea, select {
   /* margin-top: 10px; */
 }
 .underline1{
-    width: 80px;
+   width: 80px;
    height: 4px;
    background: white;
    border-radius: 5px;

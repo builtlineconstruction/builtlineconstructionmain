@@ -159,6 +159,10 @@
     .property-card{
         width: 100%;
     }
+    .landing-ceo-card{
+        flex-direction: column;
+         padding: 10px 20px;
+    }
     /* services page*/
     .service-row{
         flex-wrap: wrap;
@@ -247,6 +251,8 @@
     .icons{
         display: flex;
         flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
     }
     .contact-section{
         padding: 40px;
@@ -352,17 +358,19 @@
         width: 100%;
     }
     .project-wrapper{
-          display: flex;
-           flex-wrap: wrap;
+        display: flex;
+        flex-wrap: wrap;
         flex-direction: column;
+        height: 90vh;
     }
     .project-card{
         width: 100%;
-        height: fit-content !important;
+        
     }
-    .content{
-        height: 300px !important;
-    }
+
+    /* .project-image img{
+        height: 300px;
+    } */
     .floors-container{
         flex-direction: column;
     }
@@ -478,6 +486,27 @@
     .background-diagonal{
         height: fit-content;
     }
+     .underline1{
+        display: none;
+        
+    }
+    /* .compare plans */
+    table.list td{
+        font-size: 12px;
+       
+    }
+    table.list .feature{
+        position: relative;
+        left: -20px;
+        
+    }
+    /* career */
+    /* .career-btn{
+        margin-bottom: 30px !important;
+    } */
+    .hero-buttons{
+        flex-direction: column;
+    }
 
 }
 /* tables */
@@ -492,15 +521,16 @@
         max-width: 100%;
         flex-wrap: wrap;
         justify-content: space-between;
-        padding: 6px 0px;
+        padding: 0px 0px;
     }
     header img{
         margin-top: 0px; 
-        margin-left: -40px;  
+        margin-left: -40px; 
+        height: 30px; 
     }
     header nav{
         width: fit-content;
-        margin-top: -50px;
+        margin-top: -70px;
         position: fixed;
         right: 0px;
         top: 80px;
@@ -512,7 +542,7 @@
     }
     header nav a{
         font-size: 10px;
-        padding: 5px 10px;
+        padding: 10px 10px;
     }
    header nav button{
          padding: 10px 0px;
@@ -524,7 +554,13 @@
         margin-top: 0px;
         margin-left: 0px;
     }
-
+    .fill-btn{
+        padding:0px 3px 3px 15px;
+    }
+    .fill-btn .icon{
+        width:35px;
+        height:35px;
+    }
     /* scroll */
     .scroll-container img{
          width: 70px ; 
@@ -532,14 +568,23 @@
         margin-top: 0px;
     }
     .scroll-container navbar a{
-        font-size: 13px;
+        font-size: 12px;
     }
     .hero-mainContent{
     display: flex;
     align-items: center;
     justify-content: space-between;
     /* z-index: -1;  */
-}
+    }
+    .class-btn span{
+        padding:6px 6px 6px 20px;
+        display: inline;
+       
+    }
+    .class-btn i{
+        width:35px;
+        height:35px;
+    }
       
     .hero{
         height: fit-content;
@@ -597,6 +642,10 @@
     }
     .property-card{
         width: 100%;
+    }
+    .landing-ceo-card{
+        flex-direction: column;
+         padding: 10px 20px;
     }
         /* services page*/
     .service-row{
@@ -658,11 +707,16 @@
         flex-grow: 1;
         flex-basis: 200;
         height: auto;
-        width: 200px;
+        width: 300px;
     }
     .icons{
         display: flex;
         flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+    .underline1{
+        display: none;
     }
 
     .contact-section{
@@ -939,6 +993,7 @@
          flex-wrap: wrap;
          
     }
+   
       /* get a quote */
     
     .package-wrapper{
