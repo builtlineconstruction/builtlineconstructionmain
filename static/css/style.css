@@ -159,7 +159,6 @@ nav button a:hover{
     justify-content:space-between;
     gap:20px;
     padding:6px 6px 6px 25px;
-
     background:#2f3747;
     color:white;
     text-decoration:none;
@@ -828,10 +827,10 @@ button.btn-light {
   border-radius: 14px;
   position: relative;
   z-index: 2;
-  /* height: 100%;
-  object-fit: cover; */
+  height: 400px !important;
+  object-fit: contain;
   height:auto;
-  object-fit:contain;
+  /* object-fit:contain; */
 }
 .image-bg {
   position: absolute;
