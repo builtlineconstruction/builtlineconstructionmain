@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Builtline is a trusted construction company in Bangalore offering quality residential and commercial projects.">
+    <link rel="icon" type="image/png" href="static/image/Logo 11.jpg">
+    <title>Builtline Construction</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="static/css/style.css?v=20260317">
+                   
+    <link rel="stylesheet" href="static/css/media.css?v=2">
+    <!-- likes for font-awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.min.css" rel="stylesheet">
+    <!-- emailjs link -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <!-- Google fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="canonical" href="https://builtlineconstruction.com/about.html" />
+<body>
+
+    <section class="section-container">
+    
+    <!-- Header -->
+        <header class="hero-header container">
+        <img src="static/image/Logo1.jpg" alt="" class="Image">
+            <nav>
+                <a href="index.html"><span>HOME</span></a>
+                <div class="nav-dropdown">
+                    <a href="about.html">ABOUT</a>
+                     <div class="dropdown-menu">
+                        <a href="construction-landing.html">BUILD HOME</a>
+                        <hr>
+                        <a href="career.html">CAREER</a> 
+                    </div>
+                </div>
+                <a href="services.html">SERVICE</a>
+                <a href="project.html">PROJECTS</a>
+                <a href="construction-company-in-bangalore.html">BLOGS</a>
+                <div class="nav-dropdown">
+                        <a href="contact.html">CONTACT</a>
+                        <div class="dropdown-menu">
+                            <a href="https://builtlineconstruction.com/login.php">LOGIN</a> 
+                        </div>
+                    </div>
+                <a href="package.html" class="fill-btn">
+                    <span>GET A FREE QUOTE</span>
+                    <div class="icon"><i class="fa-solid fa-arrow-right-long"></i></div>
+                </a>
+            </nav>
+        </header>
+
+        <!-- scroll -->
+    <header class="scroll-header">
+        <div class="scroll-container container">
+            <img src="static/image/Logo 11.jpg" alt="">
+            <navbar>
+                <a href="index.html"><span>HOME</span></a>
+                <div class="nav-dropdown">
+                    <a href="about.html">ABOUT</a>
+                     <div class="dropdown-menu">
+                        <a href="construction-landing.html">BUILD HOME</a>
+                        <hr>
+                        <a href="career.html">CAREER</a> 
+                    </div>
+                </div>
+                <a href="services.html">SERVICE</a>
+                <a href="project.html">PROJECTS</a>
+                <a href="construction-company-in-bangalore.html">BLOGS</a>
+                <div class="nav-dropdown">
+                    <a href="contact.html">CONTACT</a>
+                    <div class="dropdown-menu">
+                    <a href="https://builtlineconstruction.com/login.php">LOGIN</a>
+                    </div>
+                </div>
+               <a href="package.html" class="class-btn">GET A QUOTE<i class="fa-solid fa-arrow-right-long"></i></a>
+            </navbar>
+        </div>
+    </header>
+
+    <section class="appointment-section">
+        <div class="container">
+            <div class="app-container">
+                 <h1>Book Your Appointment</h1>
+            
+                <p>
+                Schedule your visit to our office easily. Click the button below to fill out
+                a quick appointment form. Our team will get back to you shortly.
+                </p>
+
+                <div class="app-info">
+                    <p><strong>Location:</strong> Malleshwaram, Bangalore</p>
+                    <p><strong>Working Hours:</strong> 9:00 AM - 6:00 PM</p>
+                    <p><strong>Contact:</strong> +91 91484 98588</p>
+                </div>
+
+                <a href="https://forms.gle/9FfsWxVsNA9kjT3r5" target="_blank">
+                <button class="app-btn">Book Appointment</button>
+                </a>
+            </div>
+            
+           
+
+        </div>
+    </section>
+
+       
+    
+
+
+         <!-- whatsapp -->
+
+        <a href="https://wa.me/919148498588" 
+            class="whatsapp-float" 
+            target="_blank">
+            <i class="fa-brands fa-whatsapp"></i>
+        </a>
+        
+
+             <!-- Scroll Progress / Back to Top -->
+        <div id="scrollProgress">
+        <svg width="60" height="60">
+            <circle
+            cx="30"
+            cy="30"
+            r="26"
+            stroke="#e0e0e0"
+            stroke-width="4"
+            fill="none"
+            />
+            <circle
+            id="progressCircle"
+            cx="30"
+            cy="30"
+            r="26"
+            stroke="orange"
+            stroke-width="4"
+            fill="none"
+            stroke-linecap="round"
+            />
+        </svg>
+
+        <span class="arrow"><i class="fa-solid fa-arrow-up"></i></span>
+        </div>
+
+        </div>
+
+        </div>
+
+    </section>
+
+    <script src="script.js"></script>
+
+    <script>
+    const toggleBtn = document.getElementById("toggleBtn");
+    const moreContent = document.getElementById("ceoMore");
+
+    toggleBtn.addEventListener("click", function () {
+        moreContent.classList.toggle("active");
+
+        if (moreContent.classList.contains("active")) {
+        toggleBtn.textContent = "Learn Less";
+        } else {
+        toggleBtn.textContent = "Learn More";
+        }
+    });
+
+    const dropdownToggle = document.querySelector('.dropdown-toggle');
+    const navDropdown = document.querySelector('.nav-dropdown');
+
+    dropdownToggle.addEventListener('click', function (e) {
+        if (window.innerWidth < 769) {
+        e.preventDefault(); // stop contact page opening
+        navDropdown.classList.toggle('active');
+        }
+    });
+
+    // Close dropdown when clicking outside
+    document.addEventListener('click', function (e) {
+        if (!navDropdown.contains(e.target)) {
+        navDropdown.classList.remove('active');
+        }
+    });
+
+</script>
+
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+   <script src="static/script.js"></script>
+   
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.min.js"></script>
+    <script>
+        AOS.init();
+     </script>
+    <script>
+    window.addEventListener("scroll", () => {
+        if (window.scrollY > 120) {
+        document.body.classList.add("scrolled");
+        } else {
+        document.body.classList.remove("scrolled");
+        }
+    });
+    </script>
+
+     <script>
+        document.addEventListener("DOMContentLoaded", function () {
+
+        const btn = document.getElementById("scrollProgress");
+        const circle = document.getElementById("progressCircle");
+
+        const radius = circle.r.baseVal.value;
+        const circumference = 2 * Math.PI * radius;
+
+        circle.style.strokeDasharray = `${circumference}`;
+        circle.style.strokeDashoffset = `${circumference}`;
+
+        window.addEventListener("scroll", () => {
+            const scrollTop = window.pageYOffset;
+            const height =
+            document.documentElement.scrollHeight - window.innerHeight;
+
+            const progress = scrollTop / height;
+            const offset = circumference - progress * circumference;
+
+            circle.style.strokeDashoffset = offset;
+
+            btn.style.display = scrollTop > 150 ? "block" : "none";
+        });
+
+        btn.addEventListener("click", () => {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        });
+
+        });
+    </script>
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WXSFV86F"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+</body>
+</html>

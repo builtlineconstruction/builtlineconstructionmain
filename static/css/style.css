@@ -5253,3 +5253,78 @@ h1 {
     background-color: #27ae60;
 }
 
+/* booking page */
+.appointment-section {
+  padding: 80px 20px;
+  background: linear-gradient(135deg, #f5f7fa, #e4ecf3);
+ 
+}
+
+.app-container {
+  max-width: 600px;
+  margin: auto;
+  background: #ffffff;
+  padding: 40px 30px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  transition: 0.3s ease;
+   margin-top: 30px;
+}
+
+.app-container:hover {
+  transform: translateY(-5px);
+}
+
+/* Heading */
+.app-container h1 {
+  font-size: 28px;
+  margin-bottom: 15px;
+  color: #1a1a1a;
+}
+
+/* Description */
+.app-container p {
+  font-size: 15px;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* Info section */
+.app-info {
+  margin: 25px 0;
+  text-align: left;
+  padding: 15px;
+  background: #f9fbfd;
+  border-radius: 8px;
+}
+
+.app-info p {
+  margin: 8px 0;
+  font-size: 14px;
+}
+
+/* Button */
+.app-btn {
+  margin-top: 15px;
+  padding: 12px 28px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #fff;
+  background: linear-gradient(135deg, #007bff, #0056b3);
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Button hover */
+.app-btn:hover {
+  background: linear-gradient(135deg, #0056b3, #003f88);
+  transform: scale(1.05);
+}
+
+/* Remove button default outline */
+.app-btn:focus {
+  outline: none;
+}
