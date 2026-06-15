@@ -64,7 +64,6 @@ header img{
     width: 160px;
     height: 150px;
     margin-top: 180px;
-    /* margin-left: 20px; */
     z-index: 4;
     display: none;
     border-radius: 20%;
@@ -138,21 +137,7 @@ header nav a:hover, .scroll-container navbar a:hover{
 .nav-dropdown.active .dropdown-menu {
   display: block;
 }
-/* nav button{
-    background-color: darkgoldenrod;
-    color: white;
-    padding: 15px 0px;
-    border-radius: 50px;
-    border: 2px solid darkgoldenrod;
-    
-}
-nav button a:hover{
-    background-color: #fff;
-    color: darkgoldenrod;
-    padding: 15px;
-    border-radius: 50px;
 
-} */
 .class-btn{
     display:inline-flex;
     align-items:center;
@@ -309,18 +294,6 @@ transform:rotate(4deg);
   color: #c99700; 
 }
 
-/* .scroll-container navbar button {
-  background: #c99700;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 30px;
-}
-
-.scroll-container navbar button a {
-  color: #fff;
-  text-decoration: none;
-  font-weight: 600;
-} */
 
 .scroll-header {
   transition: transform 0.3s ease, opacity 0.3s ease;

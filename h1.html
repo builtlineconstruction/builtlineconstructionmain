@@ -1,13 +1,12 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project Performance Dashboard</title>
-   
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
-
+<meta charset="utf-8" />
+<meta content="width=device-width, initial-scale=1.0" name="viewport" />
+<title>Project Performance Dashboard</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" rel="stylesheet" />
 </head>
 <style>
   .performance-section {
@@ -200,35 +199,26 @@ h2 {
 }
 </style>
 <body>
-
-    <section class="performance-section">
-        <div class="container">
-           <h2>Project Performance Overview</h2>
-          <p>28 Total Projects Across 8 Bangalore Zones</p>
-
-        <div class="chart-card">
-            <h3>Zonal Project Strength</h3>
-            <canvas id="zoneChart"></canvas>
-        </div>
-
-        <div class="performance-wrapper">
-          <div class="chart-card1" >
-            <h3>Completed vs Ongoing</h3>
-            <canvas id="statusChart"></canvas>
-        </div>
-
-        <div class="chart-card1">
-            <h3>All Type Services</h3>
-            <canvas id="projectTypePieChart"></canvas>
-        </div>
-
-        </div>
-        
-        </div>
-     
-  </section>
-
-
+<section class="performance-section">
+<div class="container">
+<h2>Project Performance Overview</h2>
+<p>28 Total Projects Across 8 Bangalore Zones</p>
+<div class="chart-card">
+<h3>Zonal Project Strength</h3>
+<canvas id="zoneChart"></canvas>
+</div>
+<div class="performance-wrapper">
+<div class="chart-card1">
+<h3>Completed vs Ongoing</h3>
+<canvas id="statusChart"></canvas>
+</div>
+<div class="chart-card1">
+<h3>All Type Services</h3>
+<canvas id="projectTypePieChart"></canvas>
+</div>
+</div>
+</div>
+</section>
 <script>
 // ZONE DATA
 const zoneLabels = [
@@ -559,24 +549,22 @@ window.onload = function () {
     statusChart.update();
 };
 </script>
-
 <div class="card">
-  <!-- <div class="image"></div> -->
-   <img src="static/image/client1.jpg" class="image" alt="">
+<!-- <div class="image"></div> -->
+<img alt="Construction Services in Bangalore - Builtline Construction" class="image" loading="lazy" src="static/image/client1.jpg" /> 
   <div class="card-info">
-    <span>George Johnson</span>
-    <p>We hired Builtline Construction for a major kitchen remodel, and they exceeded our expectations. The team was fantastic. They were clean, punctual, and highly skilled.</p>
-  </div>
-   <div class="stars">
-        <i class="fas fa-star"></i>
-        <i class="fas fa-star"></i>
-        <i class="fas fa-star"></i>
-        <i class="fas fa-star"></i>
-        <i class="fas fa-star"></i>
-   </div>
-   <a href="https://www.google.com/maps/contrib/106536467711838252489/reviews?hl=en-GB" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-google google-link" class="button"></i></a>
+<span>George Johnson</span>
+<p>We hired Builtline Construction for a major kitchen remodel, and they exceeded our expectations. The team was fantastic. They were clean, punctual, and highly skilled.</p>
 </div>
-
+<div class="stars">
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+</div>
+<a href="https://www.google.com/maps/contrib/106536467711838252489/reviews?hl=en-GB" rel="noopener noreferrer" target="_blank"><i class="button"></i></a>
+</div>
 </body>
 </html>
 
