@@ -6,7 +6,7 @@
 }
 
 /* mobile version */
-@media (max-width: 600px){
+@media (max-width: 768px){
     .section-container{
        max-width: 1200px;
         width: 100%;
@@ -19,7 +19,7 @@
        max-width: 100vw;
        padding: 0;
     }
-    .hero-header{
+    /* .hero-header{
         height: auto;
         flex-direction: column;
         width: 100% !important;
@@ -29,8 +29,7 @@
     }
     header img{
         margin-top: 0px;
-        /* width: 300px;
-        height: 300px; */
+       
     }
     header nav{
         position: relative;
@@ -58,10 +57,109 @@
     header nav button a:hover{
         height: fit-content;
 
+    } */
+
+
+
+    /* Hide scroll navbar */
+    .scroll-header{
+        display:none !important;
     }
+
+    body.scrolled .scroll-header{
+        display:none !important;
+    }
+
+    body.scrolled .hero-header{
+        display:flex !important;
+    }
+
+    /* Hero Header */
+    .hero-header{
+        width:100%;
+        height:80px;
+        margin:0;
+        padding:10px 20px;
+        border-radius:0;
+        display:flex;
+        align-items:center;
+        justify-content:space-between;
+        position:fixed;
+        top:0;
+        left:0;
+        background:#fff;
+        z-index:9999;
+    }
+
+    /* Logo */
+
+    .Image{
+        width:70px ;
+        height:auto ;
+        margin:0 ;
+        display:block ;
+
+    }
+
+    /* Menu Button */
+    .menu-toggle{
+        display:block;
+        font-size:30px;
+        cursor:pointer;
+    }
+    /* Navigation */
+
+    header nav{
+        position:absolute;
+        top:80px;
+        left:0;
+        height:calc(100vh - 70px);
+        overflow-y:auto;
+        -webkit-overflow-scrolling:touch;
+        width:100%;
+        background:#fff;
+        flex-direction:column;
+        margin:0;
+        padding:10px 0;
+        border-radius:0;
+        scroll-behavior: smooth;
+        align-items:flex-start ;
+        justify-content:flex-start ;
+        z-index: 99;
+       
+
+    }
+     header nav{
+        display:none;
+    }
+
+
+
+    header nav.show{
+        display:flex;
+    }
+
+    header nav a{
+        width:100%;
+        padding:16px 20px;
+
+    }
+    .fill-btn{
+        width:90%;
+        margin:20px auto;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        height: auto;
+        padding: 20px 10px;
+        
+    }
+
+    /* hero-section */
     .hero{
         width: 100%;
         height: fit-content;
+        margin-top: 40px;
     }
     .hero::before{
         transform: translateX(150%);
@@ -82,11 +180,8 @@
        flex-direction: column;
         /* z-index: -1;  */
     }   
-    .hero-content {
-      
-       
-       width: 100%;
-        
+    .hero-content { 
+       width: 100%;  
     }
     .heroForm{
         margin-bottom: 20px;
@@ -159,9 +254,12 @@
     .property-card{
         width: 100%;
     }
+    .ceo-section{
+        padding: 0px;
+    }
     .landing-ceo-card{
         flex-direction: column;
-         padding: 10px 20px;
+         
     }
     /* services page*/
     .service-row{
@@ -350,8 +448,13 @@
         width: 300px;
         padding: 0px;
     }
-     .projectImage img {
+    .projectImage{
+        display: flex;
+        flex-direction: column;
+    }
+    .projectImage img {
         width: 100%;
+
     }
     .project-wrapper{
         display: flex;
@@ -363,10 +466,28 @@
         width: 100%;
         
     }
+    /* new project style */
+    .MainProject{
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+        flex-wrap: wrap;
+        margin: 10px;
+        width: fit-content;
+    }
+    .project-left{
+        flex-wrap: wrap;
+        padding-left: 0px;
+        width: 100%;
+        padding: 10px;
+    }
+    .project-right{
+        width: 100%;
+    }
+    .project-slider-container{
+        width: 100%;
 
-    /* .project-image img{
-        height: 300px;
-    } */
+    }
     .floors-container{
         flex-direction: column;
     }
@@ -506,7 +627,7 @@
 
 }
 /* tables */
-@media (min-width: 601px) and (max-width: 900px) {
+@media (min-width: 769px) and (max-width: 900px) {
     .section-container{
         width: 100%;
         overflow-x: hidden;
