@@ -11,7 +11,10 @@ h1, h2, h3, h4, h5, h6{
 }
 
 body p{
-    font-family: 'Roboto', sans-serif !important;
+  font-family: "Robots", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+
 }
 html, body {
   overflow-x: hidden;
@@ -876,78 +879,160 @@ line-height: 1.6;
   }
 }
 
-/* counter */
-/* 
-.counter-container {
-  width: 100%;
-  height: 100vh;
-  margin-top: -30px;
-  
+.md-container{
+    margin: 50px 20px;
 }
-
-.counter-box {
-  height: 100%;
-  text-align: left;
-  margin-left: 20px !important;
-  width: 350px;
-}
-
-
-@media (max-width: 576px) {
-  .counter-box {
-    text-align: center;
-  }
-}
-.counter-box h2 {
-  font-size: clamp(48px, 6vw, 80px);
-  line-height: 1;
-  
-}
-
-.counter-container{
+.md-box{
     display: flex;
-    padding: 40px 0px;
-    background-color: white;
-    height: fit-content;
-    width: 100%; 
-    height: fit-content;
+    gap: 60px;
     
 }
-.counter-box{
-    position: relative;
-    width: 230px;
-    margin-left: 0px;
-    height: 100%;
+.md-left{
+    width: 700px;
 }
-.counter-box::before{
-    content: "";
-    background-color: darkgoldenrod;
-    width: 5px;
-    height: 100%;  
-    position: absolute;
-    left: -10px;
-    top: -0px;
+.md-image{
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
 }
-.counter-box h2{
-    font-size: 90px;
-    color: #ddd5d5;
-    margin-top: -18px;
-    text-align: start;
+.md-image img{
+    height: 300px;
+    object-fit: cover;
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    filter: grayscale(90%);
+    transition: filter 0.5s ease, transform 0.5s ease;
+    cursor: pointer;
 }
-.counter-box h3{
-    padding: 10px 0;
-    margin-top: -20px;
+.md-image img:hover{
+    filter: grayscale(0%);
+    transform: scale(1.05);
+    border-radius: 20px;
 }
-.counter-box p{
+.md-image p{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 12px;
+    background-color: #c48a4a;
+    color: #fff;
+    border-radius: 20px;
+    margin-top: -10px;
+    margin-left: 90px;
+    z-index: 10;
+    padding: 3px 10px;
+    text-align: center;
+    width: fit-content;
+}
+.md-left-content{
+    margin-top: 30px;
+    line-height: 2;
+}
+.md-left-content h5{
+    text-align: center;
+    font-weight: 700;
+}
+.md-left-content p{
+    text-align: center;
+    color: #c48a4a;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 15px;
+}
+.md-education{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+.md-education span{
+    background-color: rgba(164, 161, 161, 0.05);
     color: gray;
-    font-family: SN Pro;
-} */
+    font-size: 12px;
+    border-radius: 15px;
+    padding: 5px 10px;
+    border: 1px solid gray;
+    font-weight: bold;
+}
+.md-skills{
+    display: flex;
+    gap: 10px; 
+    margin-top: 10px;
+}
+.md-skills span{
+    font-size: 12px;
+    background-color: #eed7aa;
+    color: #c48a4a;
+    font-weight: 700;
+    border-radius: 15px;
+    text-align: center;
+    padding: 3px 10px;
+    
+}
+.md-heading{
+    background-color: #eed7aa;
+    color: #c48a4a;
+    font-weight: 700;
+    border-radius: 15px;
+    text-align: center;
+    padding: 3px 10px;
+    width: fit-content;
+    font-size: 15px; 
+}
+.md-right h1{
+    font-size: 35px;
+    font-weight: 700;
+}
+.md-right hr{
+    width: 100px;
+    height: 6px;
+    background-color: #ff8605;
+    border-radius: 10px;
+}
+.md-text{
+    display: flex;
+    gap: 10px;
+}
+.md-text i{
+    font-size: 15px;
+    color: #c48a4a;
+    margin-top: 6px;
+}
+.md-text p{
+    font-size: 16px;
+}
+.md-text p b{
+    font-weight: 700;
+}
+.md-btn{
+    display: flex;
+    gap: 30px;
+    
+}
+.md-btn a{
+    text-decoration: none;
+    border: 2px solid #c48a4a;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 10px;
+}
+.btn-booking{
+    background-color: #c48a4a;
+    color: #fff;
+}
+.proj-btn{
+    color: #c48a4a;
+}
 
+
+
+/* counter */
 .counter-container {
   background: #f5f5f5;
   padding: 20px 3%;
-   margin-top: -30px;
-  
+  margin-top: -30px;
 }
 
 .counter-box {
