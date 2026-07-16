@@ -261,6 +261,16 @@
         flex-direction: column;
          
     }
+    .md-box{
+        flex-direction: column;
+    }
+    .md-left{
+        width:100%;
+    }
+    .md-right h1{
+        font-size: 25px;
+        width: 100%;
+    }
     /* services page*/
     .service-row{
         flex-wrap: wrap;
