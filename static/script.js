@@ -121,12 +121,12 @@ window.addEventListener("load", function(){
     openButtons.forEach(function(button){
         button.addEventListener('click', function(e){
             e.preventDefault();
-            popForm.classList.add('active')
+            popupForm.classList.add('active')
         })
     })
 
     closePopup.addEventListener("click", function(){
-        popForm.classList.remove('active')
+        popupForm.classList.remove('active')
     })
 
     popupForm.addEventListener("click",function(e){
