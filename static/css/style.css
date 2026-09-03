@@ -29,7 +29,6 @@ html, body {
   max-width: 1600px;
   margin-inline: auto;
   padding: 24px;
-  /* text-align: center; */
 }
 img{
     max-width: 100%;
@@ -3276,13 +3275,12 @@ table.list td:last-child {
 
 /* services */
 .services-section{
-    /* margin-top: 80px; */
     background: #fff;
     padding: 10px 0% !important;
     width: 100%;
-    
 
 }
+
 .services-section p{
      font-family: 'Roboto', sans-serif !important;
     font-size: 18px;
@@ -3291,7 +3289,6 @@ table.list td:last-child {
 .services-cards{
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     padding: 20px;
-    
     background-color: #f5f7fa;
 }
 .service-row{
@@ -4540,79 +4537,10 @@ html, body {
   transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
   text-decoration: none;
 }
-
-.animated-button svg {
-  position: absolute;
-  width: 24px;
-  fill: #1e1e1e;
-  z-index: 9;
-  transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
-}
-
-.animated-button .arr-1 {
-  right: 16px;
-}
-
-.animated-button .arr-2 {
-  left: -25%;
-}
-
-.animated-button .circle {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 20px;
-  height: 20px;
-  background-color: #2f3747;
-  border-radius: 50%;
-  opacity: 0;
-  transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
-}
-
-.animated-button .text {
-  position: relative;
-  z-index: 1;
-  transform: translateX(-12px);
-  transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
-}
-
 .animated-button:hover {
-  box-shadow: 0 0 0 12px transparent;
-  color: white;
-  border-radius: 12px;
+  background-color: #b8860b;
+  color: #fff;
 }
-
-.animated-button:hover .arr-1 {
-  right: -25%;
-}
-
-.animated-button:hover .arr-2 {
-  left: 16px;
-}
-
-.animated-button:hover .text {
-  transform: translateX(12px);
-}
-
-.animated-button:hover svg {
-  fill: white;
-}
-
-.animated-button:active {
-  scale: 0.95;
-  box-shadow: 0 0 0 4px #2f3747;
-}
-
-.animated-button:hover .circle {
-  width: 220px;
-  height: 220px;
-  opacity: 1;
-}
-
-/* landing hero section */
-
-
 .landing-hero{
     display:flex;
     justify-content:space-between;
